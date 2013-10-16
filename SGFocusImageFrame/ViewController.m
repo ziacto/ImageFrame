@@ -29,20 +29,20 @@
 	// Do any additional setup after loading the view, typically from a nib.
 	
 //	[UIApplication sharedApplication].statusBarStyle =  UIStatusBarStyleLightContent;
-	[self setNeedsStatusBarAppearanceUpdate];
+//	[self setNeedsStatusBarAppearanceUpdate];
     [self setupViews];
 	self.automaticallyAdjustsScrollViewInsets = NO;
 }
 
-- (UIStatusBarStyle)preferredStatusBarStyle
-{
-	return UIStatusBarStyleLightContent;
-}
-
-- (BOOL)prefersStatusBarHidden
-{
-    return NO;
-}
+//- (UIStatusBarStyle)preferredStatusBarStyle
+//{
+//	return UIStatusBarStyleLightContent;
+//}
+//
+//- (BOOL)prefersStatusBarHidden
+//{
+//    return NO;
+//}
 
 //- (void)setNeedsStatusBarAppearanceUpdate
 //{
@@ -83,6 +83,7 @@
     NSArray *imageItems = [NSArray arrayWithObjects:item1, item2, item3, item4, nil];
     SGFocusImageFrame *bottomImageFrame = [[SGFocusImageFrame alloc] initWithFrame:CGRectMake(0, 200, self.view.bounds.size.width, 193.f) delegate:self focusImageItemsArrray:imageItems];
     bottomImageFrame.autoScrolling = YES;
+	bottomImageFrame.switchTimeInterval = 5.0f;
     [self.view addSubview:bottomImageFrame];
     
 //    [self showGuidePictures];
@@ -104,7 +105,7 @@
 #pragma mark -
 - (void)foucusImageFrame:(SGFocusImageFrame *)imageFrame didSelectItem:(SGFocusImageItem *)item
 {
-    NSLog(@"%@ tapped", item.title);
+    NSLog(@"%d tapped", item.tag);
     
     if (item.tag == 1004) {
         [imageFrame removeFromSuperview];
