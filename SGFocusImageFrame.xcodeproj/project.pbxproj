@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		93D72F2D180E2A6500043B88 /* EGOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D72F21180E2A6500043B88 /* EGOCache.m */; };
+		93D72F2E180E2A6500043B88 /* EGOImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D72F24180E2A6500043B88 /* EGOImageButton.m */; };
+		93D72F2F180E2A6500043B88 /* EGOImageLoadConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D72F27180E2A6500043B88 /* EGOImageLoadConnection.m */; };
+		93D72F30180E2A6500043B88 /* EGOImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D72F29180E2A6500043B88 /* EGOImageLoader.m */; };
+		93D72F31180E2A6500043B88 /* EGOImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D72F2C180E2A6500043B88 /* EGOImageView.m */; };
+		93D72F33180E2A7200043B88 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93D72F32180E2A7200043B88 /* QuartzCore.framework */; };
 		FB154E8E179A615C00E32B31 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB154E8B179A615C00E32B31 /* Default-568h@2x.png */; };
 		FB154E8F179A615C00E32B31 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = FB154E8C179A615C00E32B31 /* Default.png */; };
 		FB154E90179A615C00E32B31 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB154E8D179A615C00E32B31 /* Default@2x.png */; };
@@ -21,7 +27,7 @@
 		FB2F4507158D6FDF009E59BA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2F4506158D6FDF009E59BA /* main.m */; };
 		FB2F450B158D6FDF009E59BA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2F450A158D6FDF009E59BA /* AppDelegate.m */; };
 		FB2F450E158D6FDF009E59BA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2F450D158D6FDF009E59BA /* ViewController.m */; };
-		FB2F451C158D7018009E59BA /* SGFocusImageFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2F451B158D7018009E59BA /* SGFocusImageFrame.m */; };
+		FB2F451C158D7018009E59BA /* SGFocusImageFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2F451B158D7018009E59BA /* SGFocusImageFrame.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		FB91385A158F2E2800ABEFB5 /* banner1.png in Resources */ = {isa = PBXBuildFile; fileRef = FB913856158F2E2800ABEFB5 /* banner1.png */; };
 		FB91385B158F2E2800ABEFB5 /* banner2.png in Resources */ = {isa = PBXBuildFile; fileRef = FB913857158F2E2800ABEFB5 /* banner2.png */; };
 		FB91385C158F2E2800ABEFB5 /* banner3.png in Resources */ = {isa = PBXBuildFile; fileRef = FB913858158F2E2800ABEFB5 /* banner3.png */; };
@@ -29,6 +35,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		93D72F20180E2A6500043B88 /* EGOCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOCache.h; sourceTree = "<group>"; };
+		93D72F21180E2A6500043B88 /* EGOCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOCache.m; sourceTree = "<group>"; };
+		93D72F23180E2A6500043B88 /* EGOImageButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOImageButton.h; sourceTree = "<group>"; };
+		93D72F24180E2A6500043B88 /* EGOImageButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOImageButton.m; sourceTree = "<group>"; };
+		93D72F26180E2A6500043B88 /* EGOImageLoadConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOImageLoadConnection.h; sourceTree = "<group>"; };
+		93D72F27180E2A6500043B88 /* EGOImageLoadConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOImageLoadConnection.m; sourceTree = "<group>"; };
+		93D72F28180E2A6500043B88 /* EGOImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOImageLoader.h; sourceTree = "<group>"; };
+		93D72F29180E2A6500043B88 /* EGOImageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOImageLoader.m; sourceTree = "<group>"; };
+		93D72F2B180E2A6500043B88 /* EGOImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOImageView.h; sourceTree = "<group>"; };
+		93D72F2C180E2A6500043B88 /* EGOImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOImageView.m; sourceTree = "<group>"; };
+		93D72F32180E2A7200043B88 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		FB154E8B179A615C00E32B31 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		FB154E8C179A615C00E32B31 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		FB154E8D179A615C00E32B31 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -61,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93D72F33180E2A7200043B88 /* QuartzCore.framework in Frameworks */,
 				FB2F44FB158D6FDF009E59BA /* UIKit.framework in Frameworks */,
 				FB2F44FD158D6FDF009E59BA /* Foundation.framework in Frameworks */,
 				FB2F44FF158D6FDF009E59BA /* CoreGraphics.framework in Frameworks */,
@@ -70,9 +88,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		93D72F1E180E2A6500043B88 /* EGOImage */ = {
+			isa = PBXGroup;
+			children = (
+				93D72F1F180E2A6500043B88 /* EGOCache */,
+				93D72F22180E2A6500043B88 /* EGOImageButton */,
+				93D72F25180E2A6500043B88 /* EGOImageLoader */,
+				93D72F2A180E2A6500043B88 /* EGOImageView */,
+			);
+			path = EGOImage;
+			sourceTree = "<group>";
+		};
+		93D72F1F180E2A6500043B88 /* EGOCache */ = {
+			isa = PBXGroup;
+			children = (
+				93D72F20180E2A6500043B88 /* EGOCache.h */,
+				93D72F21180E2A6500043B88 /* EGOCache.m */,
+			);
+			path = EGOCache;
+			sourceTree = "<group>";
+		};
+		93D72F22180E2A6500043B88 /* EGOImageButton */ = {
+			isa = PBXGroup;
+			children = (
+				93D72F23180E2A6500043B88 /* EGOImageButton.h */,
+				93D72F24180E2A6500043B88 /* EGOImageButton.m */,
+			);
+			path = EGOImageButton;
+			sourceTree = "<group>";
+		};
+		93D72F25180E2A6500043B88 /* EGOImageLoader */ = {
+			isa = PBXGroup;
+			children = (
+				93D72F26180E2A6500043B88 /* EGOImageLoadConnection.h */,
+				93D72F27180E2A6500043B88 /* EGOImageLoadConnection.m */,
+				93D72F28180E2A6500043B88 /* EGOImageLoader.h */,
+				93D72F29180E2A6500043B88 /* EGOImageLoader.m */,
+			);
+			path = EGOImageLoader;
+			sourceTree = "<group>";
+		};
+		93D72F2A180E2A6500043B88 /* EGOImageView */ = {
+			isa = PBXGroup;
+			children = (
+				93D72F2B180E2A6500043B88 /* EGOImageView.h */,
+				93D72F2C180E2A6500043B88 /* EGOImageView.m */,
+			);
+			path = EGOImageView;
+			sourceTree = "<group>";
+		};
 		FB2F44EB158D6FDF009E59BA = {
 			isa = PBXGroup;
 			children = (
+				93D72F1E180E2A6500043B88 /* EGOImage */,
 				FB2F451A158D7018009E59BA /* SGFocusImageFrame.h */,
 				FB2F451B158D7018009E59BA /* SGFocusImageFrame.m */,
 				FB2F4500158D6FDF009E59BA /* SGFocusImageFrame */,
@@ -92,6 +160,7 @@
 		FB2F44F9158D6FDF009E59BA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				93D72F32180E2A7200043B88 /* QuartzCore.framework */,
 				FB2F44FA158D6FDF009E59BA /* UIKit.framework */,
 				FB2F44FC158D6FDF009E59BA /* Foundation.framework */,
 				FB2F44FE158D6FDF009E59BA /* CoreGraphics.framework */,
@@ -214,10 +283,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93D72F31180E2A6500043B88 /* EGOImageView.m in Sources */,
+				93D72F30180E2A6500043B88 /* EGOImageLoader.m in Sources */,
 				FB2F4507158D6FDF009E59BA /* main.m in Sources */,
 				FB2F450B158D6FDF009E59BA /* AppDelegate.m in Sources */,
 				FB2F450E158D6FDF009E59BA /* ViewController.m in Sources */,
+				93D72F2E180E2A6500043B88 /* EGOImageButton.m in Sources */,
+				93D72F2F180E2A6500043B88 /* EGOImageLoadConnection.m in Sources */,
 				FB2F451C158D7018009E59BA /* SGFocusImageFrame.m in Sources */,
+				93D72F2D180E2A6500043B88 /* EGOCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,12 +357,13 @@
 		FB2F4518158D6FDF009E59BA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Shane Gao (JU977CFHHA)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SGFocusImageFrame/SGFocusImageFrame-Prefix.pch";
 				INFOPLIST_FILE = "SGFocusImageFrame/SGFocusImageFrame-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -297,10 +372,11 @@
 		FB2F4519158D6FDF009E59BA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SGFocusImageFrame/SGFocusImageFrame-Prefix.pch";
 				INFOPLIST_FILE = "SGFocusImageFrame/SGFocusImageFrame-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

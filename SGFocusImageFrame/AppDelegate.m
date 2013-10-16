@@ -16,12 +16,17 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+	  [application setStatusBarStyle:UIStatusBarStyleBlackTranslucent];
     self.viewController = [[ViewController alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:self.viewController];
+//	[nav setNavigationBarHidden:YES];
+	
     self.window.rootViewController = nav;
+	
     [self.window makeKeyAndVisible];
     return YES;
 }
+
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {

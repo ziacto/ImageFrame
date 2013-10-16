@@ -11,11 +11,11 @@
 
 @interface SGFocusImageItem : NSObject
 @property (nonatomic, strong)  NSString     *title;
-@property (nonatomic, strong)  UIImage      *image;
+@property (nonatomic, strong)  NSString      *image;
 @property (nonatomic, assign)  NSInteger     tag;
 
-- (id)initWithTitle:(NSString *)title image:(UIImage *)image tag:(NSInteger)tag;
-+ (id)itemWithTitle:(NSString *)title image:(UIImage *)image tag:(NSInteger)tag;
+- (id)initWithTitle:(NSString *)title image:(NSString *)image tag:(NSInteger)tag;
++ (id)itemWithTitle:(NSString *)title image:(NSString *)image tag:(NSInteger)tag;
 @end
 
 

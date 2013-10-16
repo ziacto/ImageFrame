@@ -8,10 +8,11 @@
 
 #import "SGFocusImageFrame.h"
 #import <objc/runtime.h>
+#import "EGOImageView.h"
 
 #pragma mark - SGFocusImageItem Definition
 @implementation SGFocusImageItem
-- (id)initWithTitle:(NSString *)title image:(UIImage *)image tag:(NSInteger)tag
+- (id)initWithTitle:(NSString *)title image:(NSString *)image tag:(NSInteger)tag
 {
     self = [super init];
     if (self) {
@@ -21,7 +22,7 @@
     }
     return self;
 }
-+ (id)itemWithTitle:(NSString *)title image:(UIImage *)image tag:(NSInteger)tag
++ (id)itemWithTitle:(NSString *)title image:(NSString *)image tag:(NSInteger)tag
 {
     return [[SGFocusImageItem alloc] initWithTitle:title image:image tag:tag];
 }
@@ -39,7 +40,7 @@
 @end
 
 static NSString *SG_FOCUS_ITEM_ASS_KEY = @"com.touchmob.sgfocusitems";
-static CGFloat SWITCH_FOCUS_PICTURE_INTERVAL = 10.0; //switch interval time
+static CGFloat SWITCH_FOCUS_PICTURE_INTERVAL = 3.0; //switch interval time
 
 @implementation SGFocusImageFrame
 
@@ -103,7 +104,6 @@ static CGFloat SWITCH_FOCUS_PICTURE_INTERVAL = 10.0; //switch interval time
     CGFloat mainWidth = self.frame.size.width, mainHeight = self.frame.size.height;
     
     UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0.f, 0.f, mainWidth, mainHeight)];
-    
     CGSize size = CGSizeMake(mainWidth, 20);
     CGRect pcFrame = CGRectMake(mainWidth *.5 - size.width *.5, mainHeight - size.height, size.width, size.height);
     UIPageControl *pageControl = [[UIPageControl alloc] initWithFrame:pcFrame];
@@ -119,12 +119,13 @@ static CGFloat SWITCH_FOCUS_PICTURE_INTERVAL = 10.0; //switch interval time
     scrollView.showsVerticalScrollIndicator = NO;
     scrollView.showsHorizontalScrollIndicator = NO;
     scrollView.pagingEnabled = YES;
+	scrollView.bounces = NO;
     
     pageControl.numberOfPages = imageItems.count;
     pageControl.currentPage = 0;
     
     scrollView.delegate = self;
-    
+//	[scrollView setShouldGroupAccessibilityChildren:YES];
     // single tap gesture recognizer
     UITapGestureRecognizer *tapGestureRecognize = [[UITapGestureRecognizer alloc] initWithTarget:self
                                                                                           action:@selector(singleTapGestureRecognizer:)];
@@ -136,8 +137,10 @@ static CGFloat SWITCH_FOCUS_PICTURE_INTERVAL = 10.0; //switch interval time
     scrollView.contentSize = CGSizeMake(scrollViewSize.width * imageItems.count, scrollViewSize.height);
     for (int i = 0; i < imageItems.count; i++) {
         SGFocusImageItem *item = [imageItems objectAtIndex:i];
-        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(i * scrollViewSize.width, 0, scrollViewSize.width, scrollViewSize.height)];
-        imageView.image = item.image;
+        EGOImageView *imageView = [[EGOImageView alloc] initWithFrame:CGRectMake(i * scrollViewSize.width, 0, scrollViewSize.width, scrollViewSize.height)];
+//		NSLog(@"=============%f",imageView.frame.origin.x);
+		NSLog(@"=============%f",scrollViewSize.height);
+        imageView.imageURL = [NSURL URLWithString:item.image];
         [scrollView addSubview:imageView];
     }
     
